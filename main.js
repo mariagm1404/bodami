@@ -38,6 +38,9 @@ menu.forEach(function(word,index){
         case "hotel":
             id="LHotel";
             break;
+        case "regalo":
+            id="LRegalo"
+            break;
         default:
             id="inicio";       
     }
@@ -101,11 +104,9 @@ function registrar() {
 }
 
 
-
 function otrapersona(){
     cambiarVista('asistencia');
 }
-
 
 
 
@@ -124,6 +125,7 @@ function actualizarNumerosAsistentes(numeroBorrado) {
 
 var añadirotro = document.getElementById('añadirotro');
 var nasistentes = 0;
+
 
 añadirotro.addEventListener('click', function () {
     nasistentes++;
@@ -172,8 +174,8 @@ añadirotro.addEventListener('click', function () {
     nuevaPersonaDiv3.classList.add('input-wrapper', 'asistira');
     nuevaPersonaDiv3.innerHTML = `<div>
     <p id="asi${uniqueId}">Asistencia</p>
-            <label for="si${uniqueId}">Si</label><input type="radio" id="si${uniqueId}" value="si${uniqueId}" name="grupos[grupo${nasistentes}][]">
-            <label for="no${uniqueId}">No</label><input type="radio" id="no${uniqueId}" value="no${uniqueId}" name="grupos[grupo${nasistentes}][]"><br>`;
+            <label for="si${uniqueId}">Si</label><input type="radio" id="si${uniqueId}" value="si${uniqueId}" name="ir[${uniqueId}]">
+            <label for="no${uniqueId}">No</label><input type="radio" id="no${uniqueId}" value="no${uniqueId}" name="ir[${uniqueId}]"><br>`;
     personaAnyadida.appendChild(nuevaPersonaDiv3);
 
     var nuevaPersonaDiv4 = document.createElement("div");
@@ -184,6 +186,64 @@ añadirotro.addEventListener('click', function () {
     comprobarcheck();
 });
 
+
+/////////////////////////
+/*Poner array que coja el nombre de los invitados y si van o no y si tienen alguna alergia poner que no tienen en nuestro menú*/
+////////////////////////////
+
+
+var Fnombres = new Array;
+var Fasistencia = new Array;
+var Falergia = new Array;
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+    enviarForm(); // Llamar a la función personalizada
+});
+function enviarForm(){
+    const form=document.getElementById('contactForm');
+
+    for (let i = 0; i < form.elements.length; i++) {
+        const element = form.elements[i];
+        // Comprobar el tipo de elemento y procesar según sea necesario
+        if (element.name === 'name[]') {
+            Fnombres.push(element.value);
+        } else if (element.name.startsWith('ir[')) {
+            // Verificar cuál de los botones de radio está seleccionado
+            if (element.checked) {
+                Fasistencia.push(element.value); // Agregar el valor ('si' o 'no') al array
+            }
+        } else if (element.name === 'alergia[]') {
+            Falergia.push(element.value);
+        }
+    }
+    console.log(Fnombres);
+    console.log(Fasistencia);
+    console.log(Falergia);
+
+    cambiarVista('formularioenviado');
+    for(var x=0;x<Fnombres.length;x++){
+        var p = document.createElement('p');
+        var as=Fasistencia[x];
+        as=as[0];
+
+        if(as=='s'){
+            p.innerHTML="¡Genial "+Fnombres[x]+"! Te esperamos con hambre  y, por supuesto, para el banquete con tus mejores pasos de baile, ¡guarda energía para la conga!"
+        }
+        else{
+            p.innerHTML="¡Qué tragedia "+Fnombres[x]+"! Tendremos que comer tu porción de pastel, pero lo haremos con lágrimas en los ojos."
+        }
+        var p2 = document.createElement('p');
+
+        if(Falergia[x]!=""){
+            p2.innerHTML="¡No te preocupes "+Fnombres[x]+"! Nuestro chef está preparado para todo, incluso para alérgicos al aburrimiento."
+        }
+        var div=document.getElementById('formularioenviado');
+        div.appendChild(p);
+        div.appendChild(p2);
+
+    }
+}
 
 
 function iglesia(){

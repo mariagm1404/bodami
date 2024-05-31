@@ -31,6 +31,7 @@
             <p id="iglesia">Iglesia</p>
             <p id="restaurante">Restaurante</p>
             <p id="hotel">Hotel</p>
+            <p id="regalo">Regalo</p>
         </nav>
     </div>
     
@@ -49,7 +50,8 @@
     </div>
 
     <div class="vista" id="asistencia">
-        <form name="contact" netlify>
+      <!--  <form name="contact" method="POST" data-netlify="true" id="contactForm">-->
+        <form id="contactForm">
             <div id="persona">
                 <br>
                 <h1>¿Nos acompañas o te lo pierdes?</h1><br>
@@ -63,12 +65,12 @@
                 <br>
                 <div class="input-wrapper asistira">
                     <p id="asi">Asistencia</p>
-                        <label for="si0" class="custom-radio">Si</label><input type="radio" class="radio-input" id="si0" value="si0" name="ir[ir0][]">
-                        <label for="no0" class="custom-radio">No</label><input type="radio" class="radio-input" id="no0" value="no0" name="ir[ir0][]">
+                        <label for="si0" class="custom-radio">Si</label><input type="radio" class="radio-input" id="si0" value="si0" name="ir[0]">
+                        <label for="no0" class="custom-radio">No</label><input type="radio" class="radio-input" id="no0" value="no0" name="ir[0]">
                 </div>
                 <br>
                 <div class="input-wrapper">
-                    <label></label><input type="text" name="alergia[]" placeholder="¿Alguna alergia/intolerancia?">
+                    <label></label><input type="text" name="alergia[]" placeholder="¿Alguna alergia/intolerancia? Dejar en blanco si no">
                 </div>
             </div>            
             <br><br>
@@ -118,6 +120,12 @@
     </div>
     <div class="vista" id="LHotel">
         <h1>Hotel</h1>
+    </div>
+    <div class="vista" id="LRegalo">
+        <h1>Regalo</h1>
+    </div>
+    <div class="vista" id="formularioenviado">
+
     </div>
 
     <footer>
