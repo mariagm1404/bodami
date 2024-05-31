@@ -195,14 +195,9 @@ añadirotro.addEventListener('click', function () {
 var Fnombres = new Array;
 var Fasistencia = new Array;
 var Falergia = new Array;
-
+var mandadoForm=false;
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-  //  event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
-    enviarForm(); // Llamar a la función personalizada
-});
-function enviarForm(){
     const form=document.getElementById('contactForm');
-
     for (let i = 0; i < form.elements.length; i++) {
         const element = form.elements[i];
         // Comprobar el tipo de elemento y procesar según sea necesario
@@ -221,6 +216,11 @@ function enviarForm(){
     console.log(Fasistencia);
     console.log(Falergia);
 
+  //  event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+    mandadoForm=true; // Llamar a la función personalizada
+});
+if(mandadoForm){
+    
     cambiarVista('formularioenviado');
     for(var x=0;x<Fnombres.length;x++){
         var p = document.createElement('p');
