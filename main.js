@@ -195,9 +195,10 @@ añadirotro.addEventListener('click', function () {
 var Fnombres = new Array;
 var Fasistencia = new Array;
 var Falergia = new Array;
-var mandadoForm=false;
+
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     const form=document.getElementById('contactForm');
+
     for (let i = 0; i < form.elements.length; i++) {
         const element = form.elements[i];
         // Comprobar el tipo de elemento y procesar según sea necesario
@@ -215,12 +216,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     console.log(Fnombres);
     console.log(Fasistencia);
     console.log(Falergia);
-
-  //  event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
-    mandadoForm=true; // Llamar a la función personalizada
-});
-if(mandadoForm){
-    
     cambiarVista('formularioenviado');
     for(var x=0;x<Fnombres.length;x++){
         var p = document.createElement('p');
@@ -241,10 +236,14 @@ if(mandadoForm){
         var div=document.getElementById('formularioenviado');
         div.appendChild(p);
         div.appendChild(p2);
-
     }
-}
+});
 
+
+
+function volverIndex(){
+    window.location.href = 'index.html';
+}
 
 function iglesia(){
     window.location.href='https://maps.app.goo.gl/NkTPZPAgQgFeUdnf6';
