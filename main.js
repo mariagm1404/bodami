@@ -197,7 +197,7 @@ var Fasistencia = new Array;
 var Falergia = new Array;
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
+  //  event.preventDefault(); // Prevenir el comportamiento por defecto del formulario
     enviarForm(); // Llamar a la función personalizada
 });
 function enviarForm(){
