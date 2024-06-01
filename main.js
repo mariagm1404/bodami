@@ -117,7 +117,7 @@ function actualizarNumerosAsistentes(numeroBorrado) {
         if (numeroActual > numeroBorrado) {
             var nuevoNumero = numeroActual - 1;
             personas[i].id = 'persona' + nuevoNumero;
-            personas[i].querySelector('#asistente').innerHTML = '<br>Acompañante ' + nuevoNumero;
+            personas[i].querySelector('#asistente').innerHTML = '<br>Invitado ' + nuevoNumero;
         }
     }
 }
@@ -138,7 +138,7 @@ añadirotro.addEventListener('click', function () {
     otrapersona.setAttribute('id', 'otrapersona');
     var h3otra = document.createElement('h3');
     h3otra.setAttribute('id', 'asistente');
-    h3otra.innerHTML = '<br>Acompañante ' + nasistentes;
+    h3otra.innerHTML = '<br>Invitado ' + nasistentes;
     otrapersona.appendChild(h3otra);
     var elimnado = document.createElement('div');
     var botonelimnado= document.createElement('button');

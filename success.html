@@ -30,35 +30,19 @@
         console.log('asistencias',asistencias);
         console.log('alergias',alergias);
 
-        var sivan=new Array;
-        var novan=new Array;
-        var conalergias=new Array;
-
-
         for(var x=0;x<nombres.length;x++){
-        //var p = document.createElement('p');
         var as=asistencias[x];
         as=as[0];
         if(as=='s'){
             sivan.push(nombres[x]);
-           // p.innerHTML="¡Genial "+nombres[x]+"! Te esperamos con hambre  y, por supuesto, para el banquete con tus mejores pasos de baile, ¡guarda energía para la conga!"
         }
         else{
             novan.push(nombres[x]);
-          //  p.innerHTML="¡Qué tragedia "+nombres[x]+"! Tendremos que comer tu porción de pastel, pero lo haremos con lágrimas en los ojos."
         }
-        //var p2 = document.createElement('p');
         
         if(alergias[x]!=""){
             conalergias.push(nombres[x]);
         }
-
-
-       /* if(alergias[x]!=""){
-            p2.innerHTML="¡No te preocupes "+nombres[x]+"! Nuestro chef está preparado para todo, incluso para alérgicos al aburrimiento."
-        }
-        div.appendChild(p);
-        div.appendChild(p2);*/
         }
         var div=document.getElementById('formularioenviado');
 
