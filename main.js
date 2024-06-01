@@ -158,7 +158,7 @@ añadirotro.addEventListener('click', function () {
     b.appendChild(otrapersona);
     personaAnyadida.appendChild(b);
 
-    /*var uniqueId = 'id_' + nasistentes;
+    var uniqueId = 'id_' + nasistentes;
 
     var nuevaPersonaDiv1 = document.createElement("div");
     nuevaPersonaDiv1.setAttribute('class', 'input-wrapper');
@@ -182,24 +182,9 @@ añadirotro.addEventListener('click', function () {
     nuevaPersonaDiv4.setAttribute('class', 'input-wrapper');
     nuevaPersonaDiv4.innerHTML = `<br><label></label><input type="text" name="alergia[]" placeholder="¿Alguna alergia/intolerancia?">`;
     personaAnyadida.appendChild(nuevaPersonaDiv4);
-*/
 
-    personaAnyadida.innerHTML = `
-        <div class="input-wrapper">
-            <label for="nombre${nasistentes}"></label>
-            <input type="text" name="name[]" id="nombre${nasistentes}" placeholder="Nombre" required><br>
-        </div>
-        <div class="input-wrapper asistira">
-            <p>Asistencia</p>
-            <label for="si${nasistentes}">Si</label>
-            <input type="radio" id="si${nasistentes}" value="si" name="ir[${nasistentes}]" required>
-            <label for="no${nasistentes}">No</label>
-            <input type="radio" id="no${nasistentes}" value="no" name="ir[${nasistentes}]" required>
-        </div>
-        <div class="input-wrapper">
-            <label></label>
-            <input type="text" name="alergia[]" placeholder="¿Alguna alergia/intolerancia?">
-        </div>`;
+
+    
     personasDiv.appendChild(personaAnyadida);
     comprobarcheck();
 });
