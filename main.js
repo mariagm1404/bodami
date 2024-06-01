@@ -201,6 +201,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const form=document.getElementById('contactForm');
     var nombres = [];
     var asistencias = [];
+    var alergias = [];
+
 
     for (let i = 0; i < form.elements.length; i++) {
         const element = form.elements[i];
@@ -214,9 +216,13 @@ document.getElementById('contactForm').addEventListener('submit', function(event
                 asistencias.push(element.value);
             }
         }
+        if (element.name === 'alergia[]') {
+            nombres.push(element.value);        } 
     }
     localStorage.setItem('nombres', JSON.stringify(nombres));
     localStorage.setItem('asistencias', JSON.stringify(asistencias));
+    localStorage.setItem('alergias', JSON.stringify(alergias));
+
     window.location.href = 'success.html';
 });
 
