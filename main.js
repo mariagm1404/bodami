@@ -199,12 +199,13 @@ var Falergia = new Array;*/
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const form=document.getElementById('contactForm');
+    var nombres = [];
+    var asistencias = [];
 
     for (let i = 0; i < form.elements.length; i++) {
         const element = form.elements[i];
         // Comprobar el tipo de elemento y procesar según sea necesario
-        const nombres = [];
-        const asistencias = [];
+        
         if (element.name === 'name[]') {
             nombres.push(element.value);        } 
         else if (element.name.startsWith('ir[')) {
