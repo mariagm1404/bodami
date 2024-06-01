@@ -200,7 +200,7 @@ var Fasistencia = new Array;
 var Falergia = new Array;*/
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    //event.preventDefault();
     const form=document.getElementById('contactForm');
     var nombres = [];
     var asistencias = [];
@@ -226,37 +226,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     localStorage.setItem('asistencias', JSON.stringify(asistencias));
     localStorage.setItem('alergias', JSON.stringify(alergias));
 
-    // Crear un nuevo formulario para enviar los datos manualmente
-    const manualForm = document.createElement('form');
-    manualForm.method = 'POST';
-    manualForm.action = form.action;
-
-    nombres.forEach((nombre, index) => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = `name[${index}]`;
-        input.value = nombre;
-        manualForm.appendChild(input);
-    });
-
-    asistencias.forEach((asistencia, index) => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = `ir[${index}]`;
-        input.value = asistencia;
-        manualForm.appendChild(input);
-    });
-
-    alergias.forEach((alergia, index) => {
-        const input = document.createElement('input');
-        input.type = 'hidden';
-        input.name = `alergia[${index}]`;
-        input.value = alergia;
-        manualForm.appendChild(input);
-    });
-
-    document.body.appendChild(manualForm);
-    manualForm.submit();
+    
 });
 
    /* const form=document.getElementById('contactForm');
