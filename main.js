@@ -183,7 +183,6 @@ añadirotro.addEventListener('click', function () {
     nuevaPersonaDiv4.innerHTML = `<br><label></label><input type="text" name="alergia[]" placeholder="¿Alguna alergia/intolerancia?">`;
     personaAnyadida.appendChild(nuevaPersonaDiv4);
     personasDiv.appendChild(personaAnyadida);
-    comprobarcheck();
 });
 
 
