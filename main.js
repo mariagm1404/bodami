@@ -197,7 +197,7 @@ var Fasistencia = new Array;
 var Falergia = new Array;*/
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    //event.preventDefault();
     const form=document.getElementById('contactForm');
     var nombres = [];
     var asistencias = [];
@@ -216,14 +216,14 @@ document.getElementById('contactForm').addEventListener('submit', function(event
                 asistencias.push(element.value);
             }
         }
-        if (element.name === 'alergia[]') {
-            nombres.push(element.value);        } 
+        else if (element.name === 'alergia[]') {
+            alergias.push(element.value);        } 
     }
     localStorage.setItem('nombres', JSON.stringify(nombres));
     localStorage.setItem('asistencias', JSON.stringify(asistencias));
     localStorage.setItem('alergias', JSON.stringify(alergias));
 
-    window.location.href = 'success.html';
+    //window.location.href = 'success.html';
 });
 
    /* const form=document.getElementById('contactForm');
