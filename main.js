@@ -158,7 +158,7 @@ añadirotro.addEventListener('click', function () {
     b.appendChild(otrapersona);
     personaAnyadida.appendChild(b);
 
-    var uniqueId = 'id_' + nasistentes;
+    /*var uniqueId = 'id_' + nasistentes;
 
     var nuevaPersonaDiv1 = document.createElement("div");
     nuevaPersonaDiv1.setAttribute('class', 'input-wrapper');
@@ -182,6 +182,24 @@ añadirotro.addEventListener('click', function () {
     nuevaPersonaDiv4.setAttribute('class', 'input-wrapper');
     nuevaPersonaDiv4.innerHTML = `<br><label></label><input type="text" name="alergia[]" placeholder="¿Alguna alergia/intolerancia?">`;
     personaAnyadida.appendChild(nuevaPersonaDiv4);
+*/
+
+    personaAnyadida.innerHTML = `
+        <div class="input-wrapper">
+            <label for="nombre${nasistentes}"></label>
+            <input type="text" name="name[]" id="nombre${nasistentes}" placeholder="Nombre" required><br>
+        </div>
+        <div class="input-wrapper asistira">
+            <p>Asistencia</p>
+            <label for="si${nasistentes}">Si</label>
+            <input type="radio" id="si${nasistentes}" value="si" name="ir[${nasistentes}]" required>
+            <label for="no${nasistentes}">No</label>
+            <input type="radio" id="no${nasistentes}" value="no" name="ir[${nasistentes}]" required>
+        </div>
+        <div class="input-wrapper">
+            <label></label>
+            <input type="text" name="alergia[]" placeholder="¿Alguna alergia/intolerancia?">
+        </div>`;
     personasDiv.appendChild(personaAnyadida);
     comprobarcheck();
 });
@@ -197,7 +215,7 @@ var Fasistencia = new Array;
 var Falergia = new Array;*/
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    //event.preventDefault();
+    event.preventDefault();
     const form=document.getElementById('contactForm');
     var nombres = [];
     var asistencias = [];
@@ -210,7 +228,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         
         if (element.name === 'name[]') {
             nombres.push(element.value);        } 
-        else if (element.name.startsWith('ir')) {
+        else if (element.name.startsWith('ir[')) {
             // Verificar cuál de los botones de radio está seleccionado
             if (element.checked) {
                 asistencias.push(element.value);
@@ -223,7 +241,37 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     localStorage.setItem('asistencias', JSON.stringify(asistencias));
     localStorage.setItem('alergias', JSON.stringify(alergias));
 
-    //window.location.href = 'success.html';
+    // Crear un nuevo formulario para enviar los datos manualmente
+    const manualForm = document.createElement('form');
+    manualForm.method = 'POST';
+    manualForm.action = form.action;
+
+    nombres.forEach((nombre, index) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = `name[${index}]`;
+        input.value = nombre;
+        manualForm.appendChild(input);
+    });
+
+    asistencias.forEach((asistencia, index) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = `ir[${index}]`;
+        input.value = asistencia;
+        manualForm.appendChild(input);
+    });
+
+    alergias.forEach((alergia, index) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = `alergia[${index}]`;
+        input.value = alergia;
+        manualForm.appendChild(input);
+    });
+
+    document.body.appendChild(manualForm);
+    manualForm.submit();
 });
 
    /* const form=document.getElementById('contactForm');
