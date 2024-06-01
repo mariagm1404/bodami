@@ -20,6 +20,38 @@
     <div id="formularioenviado">
     </div>
     <button id="volverIndex" onclick="volverIndex()">Volver a la página principal</button>
-    <script src="main.js"></script>
+    
+    <script>
+        var nombre = localStorage.getItem('name[]');
+        var ir=localStorage.getItem('ir[]');
+        var alergia= localStorage.getItem('apellidos[]');
+
+        const nombres = JSON.parse(nombre);
+        const van = JSON.parse(ir);
+        const alergias = JSON.parse(alergia);
+
+
+        for(var x=0;x<nombres.length;x++){
+        var p = document.createElement('p');
+        var as=Fasistencia[x];
+        as=as[0];
+
+        if(as=='s'){
+            p.innerHTML="¡Genial "+Fnombres[x]+"! Te esperamos con hambre  y, por supuesto, para el banquete con tus mejores pasos de baile, ¡guarda energía para la conga!"
+        }
+        else{
+            p.innerHTML="¡Qué tragedia "+Fnombres[x]+"! Tendremos que comer tu porción de pastel, pero lo haremos con lágrimas en los ojos."
+        }
+        var p2 = document.createElement('p');
+
+        if(Falergia[x]!=""){
+            p2.innerHTML="¡No te preocupes "+Fnombres[x]+"! Nuestro chef está preparado para todo, incluso para alérgicos al aburrimiento."
+        }
+        var div=document.getElementById('formularioenviado');
+        div.appendChild(p);
+        div.appendChild(p2);
+    }
+
+    </script>
 </body>
 </html>

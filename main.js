@@ -192,12 +192,32 @@ añadirotro.addEventListener('click', function () {
 ////////////////////////////
 
 
-var Fnombres = new Array;
+/*var Fnombres = new Array;
 var Fasistencia = new Array;
-var Falergia = new Array;
+var Falergia = new Array;*/
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
     const form=document.getElementById('contactForm');
+
+    for (let i = 0; i < form.elements.length; i++) {
+        const element = form.elements[i];
+        // Comprobar el tipo de elemento y procesar según sea necesario
+        if (element.name === 'name[]') {
+            localStorage.setItem(element.name, JSON.stringify(element.value));
+        } else if (element.name.startsWith('ir[')) {
+            // Verificar cuál de los botones de radio está seleccionado
+            if (element.checked) {
+                localStorage.setItem(element.name,  JSON.stringify(element.value));
+            }
+        } else if (element.name === 'alergia[]') {
+            localStorage.setItem(element.name,  JSON.stringify(element.value));
+        }
+    }
+    window.location.href = 'success.html';
+});
+
+   /* const form=document.getElementById('contactForm');
 
     for (let i = 0; i < form.elements.length; i++) {
         const element = form.elements[i];
@@ -237,7 +257,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         div.appendChild(p);
         div.appendChild(p2);
     }
-});
+});*/
 
 
 
