@@ -203,17 +203,19 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     for (let i = 0; i < form.elements.length; i++) {
         const element = form.elements[i];
         // Comprobar el tipo de elemento y procesar según sea necesario
+        const nombres = [];
+        const asistencias = [];
         if (element.name === 'name[]') {
-            localStorage.setItem(element.name, JSON.stringify(element.value));
-        } else if (element.name.startsWith('ir[')) {
+            nombres.push(element.value);        } 
+        else if (element.name.startsWith('ir[')) {
             // Verificar cuál de los botones de radio está seleccionado
             if (element.checked) {
-                localStorage.setItem(element.name,  JSON.stringify(element.value));
+                asistencias.push(element.value);
             }
-        } else if (element.name === 'alergia[]') {
-            localStorage.setItem(element.name,  JSON.stringify(element.value));
         }
     }
+    localStorage.setItem('nombres', JSON.stringify(nombres));
+    localStorage.setItem('asistencias', JSON.stringify(asistencias));
     window.location.href = 'success.html';
 });
 
