@@ -174,8 +174,8 @@ añadirotro.addEventListener('click', function () {
     nuevaPersonaDiv3.classList.add('input-wrapper', 'asistira');
     nuevaPersonaDiv3.innerHTML = `<div>
     <p id="asi${uniqueId}">Asistencia</p>
-            <label for="si${uniqueId}">Si</label><input type="radio" id="si${uniqueId}" value="si${uniqueId}" name="ir[${uniqueId}]">
-            <label for="no${uniqueId}">No</label><input type="radio" id="no${uniqueId}" value="no${uniqueId}" name="ir[${uniqueId}]"><br>`;
+            <label for="si${uniqueId}">Si</label><input type="radio" id="si${uniqueId}" value="si" name="ir[${uniqueId}]">
+            <label for="no${uniqueId}">No</label><input type="radio" id="no${uniqueId}" value="no" name="ir[${uniqueId}]"><br>`;
     personaAnyadida.appendChild(nuevaPersonaDiv3);
 
     var nuevaPersonaDiv4 = document.createElement("div");
