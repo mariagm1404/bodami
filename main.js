@@ -182,22 +182,10 @@ añadirotro.addEventListener('click', function () {
     nuevaPersonaDiv4.setAttribute('class', 'input-wrapper');
     nuevaPersonaDiv4.innerHTML = `<br><label></label><input type="text" name="alergia[]" placeholder="¿Alguna alergia/intolerancia?">`;
     personaAnyadida.appendChild(nuevaPersonaDiv4);
-
-
-    
     personasDiv.appendChild(personaAnyadida);
     comprobarcheck();
 });
 
-
-/////////////////////////
-/*Poner array que coja el nombre de los invitados y si van o no y si tienen alguna alergia poner que no tienen en nuestro menú*/
-////////////////////////////
-
-
-/*var Fnombres = new Array;
-var Fasistencia = new Array;
-var Falergia = new Array;*/
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     //event.preventDefault();
@@ -213,7 +201,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         
         if (element.name === 'name[]') {
             nombres.push(element.value);        } 
-        else if (element.name.startsWith('ir[')) {
+        else if (element.name.startsWith('ir')) {
             // Verificar cuál de los botones de radio está seleccionado
             if (element.checked) {
                 asistencias.push(element.value);
