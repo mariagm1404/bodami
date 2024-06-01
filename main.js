@@ -167,15 +167,15 @@ añadirotro.addEventListener('click', function () {
 
     var nuevaPersonaDiv2 = document.createElement("div");
     nuevaPersonaDiv2.setAttribute('class', 'input-wrapper');
-    nuevaPersonaDiv2.innerHTML = `<label for="apellidos${uniqueId}"></label><input type="text" id="apellidos${uniqueId}" name="apellido[]" placeholder="Apellidos" ><br><br>`;
+    nuevaPersonaDiv2.innerHTML = `<label for="apellidos${uniqueId}"></label><input type="text" id="apellidos${uniqueId}" name="apellido[]" placeholder="Apellidos" required><br><br>`;
     personaAnyadida.appendChild(nuevaPersonaDiv2);
 
     var nuevaPersonaDiv3 = document.createElement("div");
     nuevaPersonaDiv3.classList.add('input-wrapper', 'asistira');
     nuevaPersonaDiv3.innerHTML = `<div>
     <p id="asi${uniqueId}">Asistencia</p>
-            <label for="si${uniqueId}">Si</label><input type="radio" id="si${uniqueId}" value="si" name="ir[${uniqueId}]">
-            <label for="no${uniqueId}">No</label><input type="radio" id="no${uniqueId}" value="no" name="ir[${uniqueId}]"><br>`;
+            <label for="si${uniqueId}">Si</label><input type="radio" id="si${uniqueId}" value="si" name="ir${uniqueId}" required>
+            <label for="no${uniqueId}">No</label><input type="radio" id="no${uniqueId}" value="no" name="ir${uniqueId}" required><br>`;
     personaAnyadida.appendChild(nuevaPersonaDiv3);
 
     var nuevaPersonaDiv4 = document.createElement("div");
@@ -210,7 +210,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         
         if (element.name === 'name[]') {
             nombres.push(element.value);        } 
-        else if (element.name.startsWith('ir[')) {
+        else if (element.name.startsWith('ir')) {
             // Verificar cuál de los botones de radio está seleccionado
             if (element.checked) {
                 asistencias.push(element.value);
