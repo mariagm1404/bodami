@@ -27,13 +27,17 @@
         const asistencias = JSON.parse(localStorage.getItem('asistencias'));
         const alergias = JSON.parse(localStorage.getItem('asistencias'));
 
+        console.log('nombres',nombres);
+        console.log('asistencias',asistencias);
+        console.log('alergias',alergias);
 
 
         for(var x=0;x<nombres.length;x++){
         var p = document.createElement('p');
         var as=asistencias[x];
+        console.log(as);
         as=as[0];
-
+        console.log(as);
         if(as=='s'){
             p.innerHTML="¡Genial "+nombres[x]+"! Te esperamos con hambre  y, por supuesto, para el banquete con tus mejores pasos de baile, ¡guarda energía para la conga!"
         }
