@@ -188,7 +188,7 @@ añadirotro.addEventListener('click', function () {
 
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    //event.preventDefault();
+    event.preventDefault();
     const form=document.getElementById('contactForm');
     var nombres = [];
     var asistencias = [];
