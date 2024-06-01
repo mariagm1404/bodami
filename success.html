@@ -22,7 +22,6 @@
     <button id="volverIndex" onclick="volverIndex()">Volver a la página principal</button>
     
     <script>
-
         const nombres = JSON.parse(localStorage.getItem('nombres'));
         const asistencias = JSON.parse(localStorage.getItem('asistencias'));
         const alergias = JSON.parse(localStorage.getItem('alergias'));
@@ -31,32 +30,89 @@
         console.log('asistencias',asistencias);
         console.log('alergias',alergias);
 
+        var sivan=new Array;
+        var novan=new Array;
+        var conalergias=new Array;
+
 
         for(var x=0;x<nombres.length;x++){
-        var p = document.createElement('p');
+        //var p = document.createElement('p');
         var as=asistencias[x];
-        console.log(as);
         as=as[0];
-        console.log(as);
         if(as=='s'){
-            p.innerHTML="¡Genial "+nombres[x]+"! Te esperamos con hambre  y, por supuesto, para el banquete con tus mejores pasos de baile, ¡guarda energía para la conga!"
+            sivan.push(nombres[x]);
+           // p.innerHTML="¡Genial "+nombres[x]+"! Te esperamos con hambre  y, por supuesto, para el banquete con tus mejores pasos de baile, ¡guarda energía para la conga!"
         }
         else{
-            p.innerHTML="¡Qué tragedia "+nombres[x]+"! Tendremos que comer tu porción de pastel, pero lo haremos con lágrimas en los ojos."
+            novan.push(nombres[x]);
+          //  p.innerHTML="¡Qué tragedia "+nombres[x]+"! Tendremos que comer tu porción de pastel, pero lo haremos con lágrimas en los ojos."
         }
-        var p2 = document.createElement('p');
-
+        //var p2 = document.createElement('p');
+        
         if(alergias[x]!=""){
+            conalergias.push(nombres[x]);
+        }
+
+
+       /* if(alergias[x]!=""){
             p2.innerHTML="¡No te preocupes "+nombres[x]+"! Nuestro chef está preparado para todo, incluso para alérgicos al aburrimiento."
         }
-        var div=document.getElementById('formularioenviado');
         div.appendChild(p);
-        div.appendChild(p2);
+        div.appendChild(p2);*/
+        }
+        var div=document.getElementById('formularioenviado');
+
+        if(sivan.length==1){
+            var p = document.createElement('p');
+            p.innerHTML="¡Genial "+sivan[0]+"! Te esperamos con hambre  y, por supuesto, para el banquete con tus mejores pasos de baile, ¡guarda energía para la conga!"
+            div.appendChild(p);
         }
 
-function volverIndex(){
-    window.location.href = 'index.html';
-}
+        if(novan.length==1){
+            var p = document.createElement('p');
+            p.innerHTML="¡Qué tragedia "+novan[0]+"! Tendremos que comer tu porción de pastel, pero lo haremos con lágrimas en los ojos."
+            div.appendChild(p);
+        }
+
+        if(sivan.length>1){
+            var lineapersonas=sivan[0];
+            for(var i=1;i<sivan.length;i++){
+                lineapersonas+=", "+sivan[i];
+            }
+            var p = document.createElement('p');
+            p.innerHTML="¡Genial "+lineapersonas+"! Os esperamos con hambre para el banquete y, por supuesto, con vuestros mejores pasos de baile, ¡guardad energía para la conga!"
+            div.appendChild(p);
+        }
+
+        if(novan.length>1){
+            var lineapersonas=novan[0];
+            for(var i=1;i<novan.length;i++){
+                lineapersonas+=", "+novan[i];
+            }
+            var p = document.createElement('p');
+            p.innerHTML="¡Qué tragedia "+lineapersonas+"! Tendremos que comer vuestra porción de pastel, pero lo haremos con lágrimas en los ojos."
+            div.appendChild(p);
+        }
+
+        if(conalergias.length==1){
+            var p2 = document.createElement('p');
+            p2.innerHTML="¡No te preocupes "+conalergias[0]+"! Nuestro chef está preparado para todo, incluso para alérgicos al aburrimiento."
+            div.appendChild(p2);
+        }
+        if(conalergias.length>1){
+            var lineapersonas=conalergias[0];
+            for(var i=1;i<conalergias.length;i++){
+                lineapersonas+=", "+conalergias[i];
+            }
+            var p2 = document.createElement('p');
+            p2.innerHTML="¡No os preocupéis "+conalergias[i]+"! Nuestro chef está preparado para todo, incluso para alérgicos al aburrimiento."
+            div.appendChild(p2);
+        }
+             
+
+        function volverIndex(){
+            window.location.href = 'index.html';
+        }
 
     </script>
 </body>
