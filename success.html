@@ -52,20 +52,21 @@
         var conalergias= new Array;
 
         for(var x=0;x<nombres.length;x++){
-        var as=asistencias[x];
-        console.log(as);
-        as=as[0];
-        console.log(as);
-        if(as=='s'){
-            sivan.push(nombres[x]);
-        }
-        else{
-            novan.push(nombres[x]);
-        }
+            if(asistencias%2==0){
+                var as=asistencias[x];
+                as=as[0];
+                if(as=='s'){
+                    sivan.push(nombres[x]);
+                }
+                else{
+                    novan.push(nombres[x]);
+                }
+                
+                if(alergias[x]!=""){
+                    conalergias.push(nombres[x]);
+                }
+            }
         
-        if(alergias[x]!=""){
-            conalergias.push(nombres[x]);
-        }
         }
         var div=document.getElementById('formularioenviado');
 
