@@ -30,19 +30,28 @@
     <button id="volverIndex" onclick="volverIndex()">Volver a la página principal</button>
     
     <script>
-        const nombres = JSON.parse(localStorage.getItem('nombres'));
+        const nombres0 = JSON.parse(localStorage.getItem('nombres'));
         const asistencias = JSON.parse(localStorage.getItem('asistencias'));
         const alergias = JSON.parse(localStorage.getItem('alergias'));
 
-        console.log('nombres',nombres);
+        console.log('nombres',nombres0);
         console.log('asistencias',asistencias);
         console.log('alergias',alergias);
+
+        var nombres = new Array;
+
+        nombres0.forEach(nombre => {
+            if(nombre!=""){
+                nombres.push(nombre);
+            }
+            
+        });
 
         var sivan=new Array;
         var novan=new Array;
         var conalergias= new Array;
 
-        for(var x=0;x<asistencias.length;x++){
+        for(var x=0;x<nombres.length;x++){
         var as=asistencias[x];
         console.log(as);
         as=as[0];
