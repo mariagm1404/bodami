@@ -122,11 +122,11 @@ function actualizarNumerosAsistentes(numeroBorrado) {
     }
 }
 
-
+*/
 var añadirotro = document.getElementById('añadirotro');
 var nasistentes = 0;
 
-*/
+
 añadirotro.addEventListener('click', function () {
     nasistentes++;
     var personasDiv = document.getElementById("persona");
