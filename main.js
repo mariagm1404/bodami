@@ -134,6 +134,18 @@ añadirotro.addEventListener('click', function () {
     var otrapersona= document.getElementById(persona);
     console.log(otrapersona);
     otrapersona.classList.toggle('hidden');
+    var idnombre='nombre'+nasistentes;
+    var idnombre2=document.getElementById(idnombre);
+    idnombre2.setAttribute('required',true);
+    var idapellido='apellidos'+nasistentes;
+    var idap=document.getElementById(idapellido);
+    idap.setAttribute('required',true);
+    var idsi='si'+nasistentes;
+    var idsi2=document.getElementById(idsi);
+    idsi2.setAttribute('required',true);
+    var idno='no'+nasistentes;
+    var idno2=document.getElementById(idno);
+    idno2.setAttribute('required',true);
     /*var personasDiv = document.getElementById("persona");
     var personaAnyadida = document.createElement('div');
     personaAnyadida.setAttribute('id','persona'+nasistentes);
@@ -229,50 +241,6 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 
     
 });
-
-   /* const form=document.getElementById('contactForm');
-
-    for (let i = 0; i < form.elements.length; i++) {
-        const element = form.elements[i];
-        // Comprobar el tipo de elemento y procesar según sea necesario
-        if (element.name === 'name[]') {
-            Fnombres.push(element.value);
-        } else if (element.name.startsWith('ir[')) {
-            // Verificar cuál de los botones de radio está seleccionado
-            if (element.checked) {
-                Fasistencia.push(element.value); // Agregar el valor ('si' o 'no') al array
-            }
-        } else if (element.name === 'alergia[]') {
-            Falergia.push(element.value);
-        }
-    }
-    console.log(Fnombres);
-    console.log(Fasistencia);
-    console.log(Falergia);
-    cambiarVista('formularioenviado');
-    for(var x=0;x<Fnombres.length;x++){
-        var p = document.createElement('p');
-        var as=Fasistencia[x];
-        as=as[0];
-
-        if(as=='s'){
-            p.innerHTML="¡Genial "+Fnombres[x]+"! Te esperamos con hambre  y, por supuesto, para el banquete con tus mejores pasos de baile, ¡guarda energía para la conga!"
-        }
-        else{
-            p.innerHTML="¡Qué tragedia "+Fnombres[x]+"! Tendremos que comer tu porción de pastel, pero lo haremos con lágrimas en los ojos."
-        }
-        var p2 = document.createElement('p');
-
-        if(Falergia[x]!=""){
-            p2.innerHTML="¡No te preocupes "+Fnombres[x]+"! Nuestro chef está preparado para todo, incluso para alérgicos al aburrimiento."
-        }
-        var div=document.getElementById('formularioenviado');
-        div.appendChild(p);
-        div.appendChild(p2);
-    }
-});*/
-
-
 
 function volverIndex(){
     window.location.href = 'index.html';
