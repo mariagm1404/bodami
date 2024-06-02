@@ -24,6 +24,7 @@
     </style>
 </head>
 <body>
+    <!--
     <div id="contenedor">
         <nav id="nav">
             <p id="inicios">Inicio</p>
@@ -64,8 +65,8 @@
                 <br>
                 <div class="input-wrapper asistira">
                     <p id="asi">Asistencia</p>
-                        <label for="si0" class="custom-radio">Si</label><input type="radio" class="radio-input" id="si0" value="si" name="ir[0]" required>
-                        <label for="no0" class="custom-radio">No</label><input type="radio" class="radio-input" id="no0" value="no" name="ir[0]" required>
+                        <label for="si0" class="custom-radio">Si</label><input type="radio" class="radio-input" id="si0" value="si" name="ir" required>
+                        <label for="no0" class="custom-radio">No</label><input type="radio" class="radio-input" id="no0" value="no" name="ir" required>
                 </div>
                 <br>
                 <div class="input-wrapper">
@@ -128,6 +129,31 @@
         <h3>Miguel e Irene</h3>
         <h4>19 Octubre 2021</h4>
     </footer>
+-->
+<form name="contact" method="POST" data-netlify="true" id="contactForm" action=/success>
+    <div id="persona">
+         <div class="input-wrapper asistira">
+             <p id="asi">Asistencia</p>
+                 <label for="si0" class="custom-radio">Si</label><input type="radio" class="radio-input" id="si0" value="si" name="ir[]" required>
+                 <label for="no0" class="custom-radio">No</label><input type="radio" class="radio-input" id="no0" value="no" name="ir[]" required>
+         </div>
+         <br>
+         <div class="input-wrapper asistira">
+            <p id="asi">Asistencia</p>
+                <label for="si23" class="custom-radio">Si</label><input type="radio" class="radio-input" id="si23" value="si" name="ir[]" required>
+                <label for="no23" class="custom-radio">No</label><input type="radio" class="radio-input" id="no23" value="no" name="ir[]" required>
+        </div>
+
+     </div>            
+     <br><br>
+     <div id="añadirotro">
+         <span class="material-symbols-outlined">add</span>
+         <p>Añadir a otro invitado</p>
+     </div>          
+     <br>
+     <button type="submit" name="register" value="Enviar" id="enviar">Enviar</button>
+
+ </form>
     
     <script src="main.js"></script>
 </body>
