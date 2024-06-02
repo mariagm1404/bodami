@@ -229,14 +229,14 @@ input[type="checkbox"] {
 }
 
 #bab{
+    margin: 0 auto;
+    width: 60%;
     display: flex;
     justify-content: center;
-    width: 92%;
 }
 
 #otrapersona{
     display: flex;
-    justify-content: space-between;
     width: 50%;
 }
 
@@ -246,9 +246,9 @@ input[type="checkbox"] {
     flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
+    background-color: transparent;
+    color: #000000;
 }
-
-
 
 #añadirotro{
     display: flex;
@@ -261,13 +261,7 @@ input[type="checkbox"] {
     margin: 0;
 }
 
-#figelim > button{
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    color: #000000;
-    padding: 5px;
-}
+
 
 #figelim > button > p{
     margin:0;
@@ -431,6 +425,9 @@ footer{
 }
 
 @media screen and (max-width:836px){
+    #nav>p{
+        font-size: 15px;
+    }
     
     #persona> h1{
         font-size: 1.2em;
@@ -508,19 +505,20 @@ footer{
         width: 99%;
         justify-content: space-between;
     }
-
     #bab{
-        width:98%;
+        font-size: 1em;
     }
+
     #otrapersona {
-        justify-content: space-around;
+        font-size: 15px;
         width: 80%;
     }
-    #figelim > button > .material-symbols-outlined{
+    #figelim > .material-symbols-outlined{
         font-size: 15px;
     }  
 
-    #figelim > button{
+    #figelim{
+        margin-top: 0;
         font-size: 15px;
     }  
 

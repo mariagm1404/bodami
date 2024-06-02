@@ -126,13 +126,56 @@ function actualizarNumerosAsistentes(numeroBorrado) {
 var añadirotro = document.getElementById('añadirotro');
 var nasistentes = 0;
 
+function borrarinvitado(id){
+    /*var persona='persona'+id;
+    var otrapersona= document.getElementById(persona);
+    otrapersona.classList.toggle('hidden');
+    var idnombre='nombre'+id;
+    var idnombre2=document.getElementById(idnombre);
+    idnombre2.removeAttribute('required');
+    var idapellido='apellidos'+id;
+    var idap=document.getElementById(idapellido);
+    idap.removeAttribute('required');
+    var idsi='si'+id;
+    var idsi2=document.getElementById(idsi);
+    idsi2.removeAttribute('required');
+    var idno='no'+id;
+    var idno2=document.getElementById(idno);
+    idno2.removeAttribute('required');*/
+    var invitados=new Array;
+    for(var i=1;i<=20;i++){
+        var tr='persona'+i;
+        var hidden=document.getElementById(tr);
+        if(hidden.classList.contains('hidden')==false){
+            invitados.push(i);
+        };
+    }
+    var aelim=invitados.length;
+    var id=invitados[aelim-1];
+    var p ='persona'+id;
+    var otrapersona= document.getElementById(p);
+    otrapersona.classList.toggle('hidden');
+    var idnombre='nombre'+id;
+    var idnombre2=document.getElementById(idnombre);
+    idnombre2.removeAttribute('required');
+    var idapellido='apellidos'+id;
+    var idap=document.getElementById(idapellido);
+    idap.removeAttribute('required');
+    var idsi='si'+id;
+    var idsi2=document.getElementById(idsi);
+    idsi2.removeAttribute('required');
+    var idno='no'+id;
+    var idno2=document.getElementById(idno);
+    idno2.removeAttribute('required');
+    nasistentes--;
+}
+
 
 añadirotro.addEventListener('click', function () {
 
     nasistentes++;
     var persona='persona'+nasistentes;
     var otrapersona= document.getElementById(persona);
-    console.log(otrapersona);
     otrapersona.classList.toggle('hidden');
     var idnombre='nombre'+nasistentes;
     var idnombre2=document.getElementById(idnombre);
