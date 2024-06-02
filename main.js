@@ -189,6 +189,8 @@ añadirotro.addEventListener('click', function () {
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     //event.preventDefault();
+    var clonedForm = this.cloneNode(true);
+    this.parentNode.appendChild(clonedForm);
     const form=document.getElementById('contactForm');
     var nombres = [];
     var asistencias = [];
