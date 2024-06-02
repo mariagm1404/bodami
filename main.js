@@ -1,4 +1,4 @@
-/*var vistaActual=null;
+var vistaActual=null;
 const nav=document.getElementById('nav');    
 var id=null;
 var menu=nav.querySelectorAll('p');
@@ -122,14 +122,19 @@ function actualizarNumerosAsistentes(numeroBorrado) {
     }
 }
 
-*/
+
 var añadirotro = document.getElementById('añadirotro');
 var nasistentes = 0;
 
 
 añadirotro.addEventListener('click', function () {
+
     nasistentes++;
-    var personasDiv = document.getElementById("persona");
+    var persona='persona'+nasistentes;
+    var otrapersona= document.getElementById(persona);
+    console.log(otrapersona);
+    otrapersona.classList.toggle('hidden');
+    /*var personasDiv = document.getElementById("persona");
     var personaAnyadida = document.createElement('div');
     personaAnyadida.setAttribute('id','persona'+nasistentes);
     var b = document.createElement('div');
@@ -159,7 +164,7 @@ añadirotro.addEventListener('click', function () {
     personaAnyadida.appendChild(b);
 
     var uniqueId = 'id_' + nasistentes;
-/*
+
     var nuevaPersonaDiv1 = document.createElement("div");
     nuevaPersonaDiv1.setAttribute('class', 'input-wrapper');
     nuevaPersonaDiv1.innerHTML = `<label for="nombre${uniqueId}"></label><input type="text" name="name[]" id="nombre${uniqueId}" placeholder="Nombre" required><br><br>`;
@@ -168,7 +173,7 @@ añadirotro.addEventListener('click', function () {
     var nuevaPersonaDiv2 = document.createElement("div");
     nuevaPersonaDiv2.setAttribute('class', 'input-wrapper');
     nuevaPersonaDiv2.innerHTML = `<label for="apellidos${uniqueId}"></label><input type="text" id="apellidos${uniqueId}" name="apellido[]" placeholder="Apellidos" required><br><br>`;
-    personaAnyadida.appendChild(nuevaPersonaDiv2);*/
+    personaAnyadida.appendChild(nuevaPersonaDiv2);
 
     var nuevaPersonaDiv3 = document.createElement("div");
     nuevaPersonaDiv3.classList.add('input-wrapper', 'asistira');
@@ -177,20 +182,18 @@ añadirotro.addEventListener('click', function () {
             <label for="si${uniqueId}">Si</label><input type="radio" id="si${uniqueId}" value="si" name="ir${uniqueId}" required>
             <label for="no${uniqueId}">No</label><input type="radio" id="no${uniqueId}" value="no" name="ir${uniqueId}" required><br>`;
     personaAnyadida.appendChild(nuevaPersonaDiv3);
-/*
+
     var nuevaPersonaDiv4 = document.createElement("div");
     nuevaPersonaDiv4.setAttribute('class', 'input-wrapper');
     nuevaPersonaDiv4.innerHTML = `<br><label></label><input type="text" name="alergia[]" placeholder="¿Alguna alergia/intolerancia?">`;
-    personaAnyadida.appendChild(nuevaPersonaDiv4);*/
-    personasDiv.appendChild(personaAnyadida);
+    personaAnyadida.appendChild(nuevaPersonaDiv4);
+    personasDiv.appendChild(personaAnyadida);*/
     //comprobarcheck();
 });
 
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     //event.preventDefault();
-    var clonedForm = this.cloneNode(true);
-    this.parentNode.appendChild(clonedForm);
     const form=document.getElementById('contactForm');
     var nombres = [];
     var asistencias = [];
