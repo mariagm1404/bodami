@@ -50,20 +50,22 @@
         var sivan=new Array;
         var novan=new Array;
         var conalergias= new Array;
+        var n=0;
 
         for(var x=0;x<asistencias.length;x++){
             var as=asistencias[x];
             as=as[0];
             if(as=='s'){
-                sivan.push(nombres[x]);
+                sivan.push(nombres[n]);
             }
             else{
-                novan.push(nombres[x]);
+                novan.push(nombres[n]);
             }
             
-            if(alergias[x]!=""){
-                conalergias.push(nombres[x]);
+            if(alergias[n]!=""){
+                conalergias.push(nombres[n]);
             }
+            n++;
             x++;
         }
         var div=document.getElementById('formularioenviado');
