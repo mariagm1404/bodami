@@ -28,6 +28,9 @@
             p{
                 font-size: 12px;
             }
+            button{
+                font-size: 12px;
+            }
         }
     </style>
 </head>
@@ -40,10 +43,6 @@
         const nombres0 = JSON.parse(localStorage.getItem('nombres'));
         const asistencias = JSON.parse(localStorage.getItem('asistencias'));
         const alergias = JSON.parse(localStorage.getItem('alergias'));
-
-        console.log('nombres',nombres0);
-        console.log('asistencias',asistencias);
-        console.log('alergias',alergias);
 
         var nombres = new Array;
 
@@ -109,7 +108,6 @@
             div.appendChild(p);
         }
 
-        console.log(conalergias);
 
         if(conalergias.length==1){
             var p2 = document.createElement('p');
