@@ -144,6 +144,8 @@ nav> p{
 #inicio #compro{
     position:absolute;
     top:800px;
+    width: 80%;
+    left: 10%;
 }
 
 
