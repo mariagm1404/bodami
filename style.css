@@ -171,18 +171,27 @@ nav> p{
     margin-top: 10em;
     text-align: center;
     top: 400px;
+    width: 80%;
+    left: 10%;
 }
 
 #countdown{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
+
+
+.aleo> {
+  font-family: "Aleo", serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
 #countdown > div{
     background: transparent;
-    font-family: "Allura", cursive;
-    font-weight: 800;
-    font-style: normal;    
     flex-basis: 25%;
     box-sizing: border-box;
     padding-left: 10px;
@@ -419,7 +428,6 @@ footer img{
         text-align: center;
     }
     #countdown > div{
-        font-weight: 800;
         flex-basis: 25%;
         padding-left: 10px;
         font-size: 1em;
@@ -497,9 +505,7 @@ footer img{
         top:400px;
         text-align: center;
     }
-    #countdown > div{
-        font-weight: 800;
-        font-style: normal;    
+    #countdown > div{  
         flex-basis: 25%;
         box-sizing: border-box;
         padding-left: 10px;
