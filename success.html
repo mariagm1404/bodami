@@ -118,11 +118,11 @@
         }
         if(conalergias.length>1){
             var lineapersonas=conalergias[0];
-            for(var i=1;i<conalergias.length-1;i++){
+            for(var i=1;i<conalergias.length;i++){
                 lineapersonas+=", "+conalergias[i];
             }
             var p2 = document.createElement('p');
-            p2.innerHTML="¡No os preocupéis "+conalergias[i]+"! Nuestro chef está preparado para todo, incluso para alérgicos al aburrimiento."
+            p2.innerHTML="¡No os preocupéis "+lineapersonas+"! Nuestro chef está preparado para todo, incluso para alérgicos al aburrimiento."
             div.appendChild(p2);
         }
              
