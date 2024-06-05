@@ -25,7 +25,6 @@ nav> p{
 
 #inicio{
     width:98%;
-    text-align: center;
     z-index: 19999999;
 }
 
@@ -39,6 +38,16 @@ nav> p{
     width:fit-content;
     position: absolute;
     top:19%;
+}
+
+
+#inicio #nombres{
+    position: absolute;
+    margin: 0;
+    width: 39%;
+    left:52%;
+    top:170px;
+    opacity: 1;
 }
 
 #inicio > .movable{
@@ -132,6 +141,10 @@ nav> p{
     margin-top: 0;
 }
 
+#inicio #compro{
+    position:absolute;
+    top:800px;
+}
 
 
 #contenedor{
@@ -152,8 +165,10 @@ nav> p{
 
 
 #cuentatras{
+    position: relative;
     margin-top: 10em;
     text-align: center;
+    top: 400px;
 }
 
 #countdown{
@@ -340,12 +355,12 @@ button:hover {
 
 /*Footer*/
 
-footer{
-    margin-top: 20px;
-    position: absolute;
-    width: 98.5%; 
-    text-align: center;
-    z-index: 19999999;
+footer img{
+    position:relative;
+    width: 13%; 
+    top:1400px;
+    left: 50%;
+    padding: 1em;
 }
 @media screen and (max-width:1200px){
     #inicio > h1{
@@ -399,7 +414,6 @@ footer{
     }
     
     #cuentatras{
-        margin-top: 500px;
         text-align: center;
     }
     #countdown > div{
@@ -426,7 +440,7 @@ footer{
 
 @media screen and (max-width:836px){
     #nav>p{
-        font-size: 15px;
+        font-size: 12px;
     }
     
     #persona> h1{
@@ -478,7 +492,7 @@ footer{
     }
     
     #cuentatras{
-        margin-top: 400px;
+        top:400px;
         text-align: center;
     }
     #countdown > div{
@@ -584,7 +598,10 @@ footer{
     }
     
     #cuentatras{
-        margin-top: 230px;
+        width: 80%;
+        left: 10%;
+        margin-top: 0;
+        top:250px;
         text-align: center;
     }
     #countdown > div{
@@ -593,6 +610,11 @@ footer{
         padding-left: 10px;
         text-align: center;
         font-size: 1.2em;
+    }
+    #inicio #compro{
+        top: 400px;
+        width: 80%;
+        left: 10%;
     }
 
     #contenedor{
@@ -609,5 +631,10 @@ footer{
         display: flex;
         width: 97%;
         justify-content: space-between;
+    }
+
+    footer img{
+        left: 40%;
+        top:550px;
     }
 }
