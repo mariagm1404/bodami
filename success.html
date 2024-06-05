@@ -22,6 +22,12 @@
             justify-content: center;
             margin: 4em;
         }
+
+        @media screen and (max-width:836px){
+            p{
+                font-size: 12px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -101,6 +107,8 @@
             p.innerHTML="¡Qué tragedia "+lineapersonas+"! Tendremos que comer vuestra porción de pastel, pero lo haremos con lágrimas en los ojos."
             div.appendChild(p);
         }
+
+        console.log(conalergias);
 
         if(conalergias.length==1){
             var p2 = document.createElement('p');
