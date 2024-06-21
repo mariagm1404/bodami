@@ -123,10 +123,19 @@ nav> p{
     font-size: 5em;
 }
 
+#h1asistir{
+    position: absolute;
+    margin: 0;
+    width: 25%;
+    left:25%;
+    top:210px;
 
+}
 
 
 /*Asistencia*/
+
+
 
 #asistencia{
     background-color: #ffffff;
@@ -241,13 +250,12 @@ button:hover {
     width: 40%;
 }
 
-#ceremonia > h1{
+#h1linea{
     position: absolute;
-    background-color: #ffffff;
-    top:150px;
-    left: 20%;
-    font-size: 4em;
-
+    margin: 0;
+    width: 25%;
+    left:25%;
+    top:210px;
 }
 
 #ceremonia > h2{
@@ -291,10 +299,7 @@ button:hover {
 
 /*Restaurante*/
 
-#LRest{
-    margin-left: 2em;
-    z-index: 19999999;
-}
+
 
 
 /*Footer*/
@@ -311,16 +316,25 @@ footer img{
 
 
 @media screen and (max-width:1200px){
-    
+    .linea-horizontal {
+        width: 30%;
+        top:627px;
+    }
 
     footer img{
         left: 40%;
         top:800px;
     }
+    footer img{
+        top:850px;
+    }
 
 }
 
 @media screen and (max-width:836px){
+    #contenedor > nav{   
+        width: 70%;
+    }
     #nav>p{
         font-size: 12px;
     }
@@ -340,8 +354,12 @@ footer img{
     #countdown > div:nth-of-type(4) {
         font-size: 3em;
     }
+    .linea-horizontal {
+        width: 30%;
+        top:627px;
+    }
 
-
+    
 }
 
 
@@ -350,7 +368,7 @@ footer img{
         width: 95%;
     }
     #contenedor > nav{   
-        width: 80%;
+        width: 90%;
     }
     #inicio #nombres{
         width: 50%;
@@ -364,9 +382,8 @@ footer img{
     }
 
     .linea-horizontal {
-        height: 3px;
         width: 30%;
-        top:578px;
+        top:577px;
     }
 
     #inicio > #fecha{
@@ -379,7 +396,7 @@ footer img{
 
     #cuentatras{
         top: 700px;
-        width: 85%;
+        width: 80%;
     }
 
     #countdown{
