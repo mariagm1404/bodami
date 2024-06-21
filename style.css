@@ -1,7 +1,10 @@
 
 *{
     background-color: #ffffff;   
-    font-family: 'Aleo','Times New Roman', Times, serif;
+    font-family: "Aleo", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
 }
 body{
     margin:0;
@@ -273,6 +276,12 @@ button:hover {
     top:620px;
     left:60%;
 }
+#ceremonia > a{
+    position: absolute;
+    background-color: #ffffff;
+    top:655px;
+    left:16%;
+}
 
 #LIglesia > p{
     position: absolute;
@@ -308,7 +317,7 @@ footer img{
     position:relative;
     width: 13%; 
     top:1000px;
-    left: 41%;
+    left: 33%;
     padding: 1em;
     padding-bottom: 3em;
 }
@@ -372,31 +381,33 @@ footer img{
     }
     #inicio #nombres{
         width: 50%;
-        left:15%;
+        left:3.5%;
         top:210px;
     }
     .linea-vertical {
         height: 500px;
-        top:100px;
-        left:30%;
+        top:99px;
+        left:20%;
     }
 
     .linea-horizontal {
         width: 30%;
         top:577px;
+        margin: 20px 20%;
     }
 
     #inicio > #fecha{
         position: absolute;
-        top:570px;
-        left: 62%;
+        top:560px;
+        left: 53%;
         font-size: 1.5em;
     }
 
 
     #cuentatras{
-        top: 700px;
-        width: 80%;
+        top: 600px;
+        width: 75%;
+        margin-left: 7%;
     }
 
     #countdown{
@@ -411,23 +422,84 @@ footer img{
         box-sizing: border-box;
         padding-left: 10px;
         text-align: center;
-        font-size: 1em;
+        font-size: 0.5em;
     }
 
     #countdown > div:nth-of-type(1) {
-        font-size: 2.5em;
+        font-size: 1.5em;
     }
     #countdown > div:nth-of-type(2) {
-        font-size: 2.5em;
+        font-size: 1.5em;;
     }
     #countdown > div:nth-of-type(3) {
-        font-size: 2.5em;
+        font-size: 1.5em;;
     }
     #countdown > div:nth-of-type(4) {
-        font-size: 2.5em;
+        font-size: 1.5em;;
+    }
+
+    #h1linea{
+        width: 25%;
+        left:10%;
+    }
+
+    #persona> h1{
+        font-size: 1em;
+    }
+
+    #otrapersona{
+        font-size: 1em; 
+
+    }
+
+    #figelim{
+        padding: 2px 8px; /* Tamaño del relleno */
+        font-size: 12px; /* Tamaño del texto */
+        line-height: 1.5; /* Altura de la línea */ padding: 5px 10px; /* Tamaño del relleno */
+    }
+
+    #figelim span{
+        font-size: 15px; /* Tamaño del texto */
+    }
+
+    /*Asistencia*/
+
+    #ceremonia > h2{
+        font-size: 1em;
+    }
+    #ceremonia > h2:nth-of-type(1){
+        position: absolute;
+        background-color: #ffffff;
+        top:572px;
+        left:50%;
+    }
+    #ceremonia > h2:nth-of-type(2){
+        background-color: #ffffff;
+        top:652px;
+        left:25%;
+    }
+    #ceremonia > a{
+        background-color: #ffffff;
+        top:690px;
+        left:29%;
+    }
+
+    #ceremonia > span{
+        position: absolute;
+        font-size: 1.2em;
+        z-index: 5;
+    }
+    #ceremonia > span:nth-of-type(1){
+        top:663px;
+        left:21%;
+    }
+    #ceremonia > span:nth-of-type(2){
+        top:690px;
+        left:21%;
     }
 
     footer img{
-        top:750px;
+        top:650px;
+        width: 20%; 
     }
 }

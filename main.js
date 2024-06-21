@@ -13,6 +13,21 @@ function cambiarNav(idNav){
     });     
 }
 
+var logo =document.getElementById("logo");
+
+function estoyenAsistencia(){
+    logo.style.top="80px";
+    logo.style.left="33%";
+}
+
+function estoyenInicio(){
+    logo.style.top="650px";
+}
+
+function estoyenIglesia(){
+    logo.style.top="650px";
+}
+
 function cambiarVista(id){
     if(vistaActual){
         document.getElementById(vistaActual).classList.remove("visible");
@@ -28,21 +43,21 @@ menu.forEach(function(word,index){
         switch(idsitio){
         case "asistir":
             id="asistencia";
+            estoyenAsistencia();
             break;
         case "iglesia":
             id="LIglesia";
+            estoyenIglesia();
             break;
         case "restaurante":
             id="LRest";
-            break;
-        case "hotel":
-            id="LHotel";
             break;
         case "regalo":
             id="LRegalo"
             break;
         default:
-            id="inicio";       
+            id="inicio";  
+            estoyenInicio();     
     }
         cambiarVista(id);
         cambiarNav(idsitio);

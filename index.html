@@ -31,12 +31,11 @@
     
     <div id="contenedor">
         <nav id="nav">
-            <p id="inicios">Inicio</p>
-            <p id="asistir">Asistencia</p>
-            <p id="iglesia">Iglesia</p>
-            <p id="restaurante">Restaurante</p>
-            <p id="hotel">Hotel</p>
-            <p id="regalo">Regalo</p>
+            <p id="inicios" class="aleo">Inicio</p>
+            <p id="asistir" class="aleo">Asistencia</p>
+            <p id="iglesia" class="aleo">Iglesia</p>
+            <p id="restaurante" class="aleo">Restaurante</p>
+            <p id="regalo" class="aleo">Regalo</p>
         </nav>
     </div>
     
@@ -59,7 +58,7 @@
            <div id="persona">
                 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
-                <h1>¿Nos acompañas o te lo pierdes?</h1><br>
+                <h1 class="aleo">¿Nos acompañas o te lo pierdes?</h1><br>
                 <div class="input-wrapper">
                     <label for="nombre"></label><input type="text" name="name[]" id="nombre" placeholder="Nombre" required><br>
                 </div>
@@ -643,11 +642,15 @@
         <div class="linea-vertical"></div>
         <hr class="linea-horizontal"></hr>
         <div id="ceremonia">
-            <h1 class="aleo" id="h1linea">Ceremonia</h1><br>
+            <h1 class="aleo" id="h1linea">Ceremonia</h1><br>                
             <h2 class="aleo">Parroquia Santa Eulalia</h2>
+            <span class="material-symbols-outlined">schedule</span>
             <h2 class="aleo">12:00h</h2>
+            <span class="material-symbols-outlined">pin_drop</span>
+            <a class="aleo">Ubicación</a>
+
         </div>
-        <img src="Imagenes/SEulalia.jpg" alt="">
+      <!--  <img src="Imagenes/SEulalia.jpg" alt="">-->
        <!-- <button type="submit" onclick="iglesia()" id="ubicacionIglesia" class="aleo">Abrir en Google Maps</button>-->
         <p class="aleo">Como muchos sois de fuera os ponemos a continuación los parkings que hay por la zona por si no encontráis para aparcar :&#41;</p>
         <div id="parkings">
@@ -669,11 +672,7 @@
         <h2 class="aleo">Salón de celebraciones Aquario</h2>
         <button type="submit" onclick="ubirestaurante()" id="parking3">Ubicación</button>
     </div>
-    <div class="vista" id="LHotel">
-        <div class="linea-vertical"></div>
-        <hr class="linea-horizontal"></hr>
-        <h1 class="aleo">Hotel</h1>
-    </div>
+    
     <div class="vista" id="LRegalo">
         <div class="linea-vertical"></div>
         <hr class="linea-horizontal"></hr>
