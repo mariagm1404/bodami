@@ -317,6 +317,13 @@ button:hover {
 
 
 
+/*Regalo*/
+
+#LRegalo > h2{
+    position:relative;
+    top:620px;
+}
+
 
 /*Footer*/
 
@@ -447,7 +454,7 @@ footer img{
 
     #h1linea{
         width: 25%;
-        left:10%;
+        left:11.5%;
     }
 
     #persona> h1{
@@ -479,6 +486,7 @@ footer img{
         background-color: #ffffff;
         top:572px;
         left:50%;
+        width: 100px;
     }
     #ceremonia > h2:nth-of-type(2){
         background-color: #ffffff;
