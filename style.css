@@ -170,6 +170,12 @@ input[type="text"]:focus{
     outline:none;
 }
 
+a{
+    color: black;
+}
+a:visited{
+    color: black;
+}
 
 #asistente{
     display: flex;
@@ -285,12 +291,13 @@ button:hover {
 
 #LIglesia > p{
     position: absolute;
+    margin: 20px;
     font-size: 1.5em;
     top:800px;
 }
 #LIglesia >#parkings{
     position: absolute;
-    top:900px;
+    top:1000px;
 }
 #LIglesia >#parkings, h2{
     padding-left: 10px;
