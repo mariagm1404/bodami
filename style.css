@@ -152,7 +152,6 @@ form{
 }
 
 h1{
-    font-family:'Courier New', Courier, monospace;
     font-size: 2em;
 }
 
@@ -482,14 +481,14 @@ footer img{
     /*Asistencia*/
 
     #ceremonia > h2{
-        font-size: 1em;
+        font-size: 1.2em;
     }
     #ceremonia > h2:nth-of-type(1){
         position: absolute;
         background-color: #ffffff;
         top:572px;
         left:50%;
-        width: 100px;
+        width: 150px;
     }
     #ceremonia > h2:nth-of-type(2){
         background-color: #ffffff;
@@ -499,6 +498,7 @@ footer img{
     #ceremonia > a{
         background-color: #ffffff;
         top:690px;
+        font-size: 1.2em;
         left:29%;
     }
 
