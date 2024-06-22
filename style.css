@@ -531,7 +531,26 @@ footer img{
     #parkings>p{
         font-size: 1.2em;
     }
-   
+
+    /*Restaurante*/
+    #LRest > h2{
+        font-size: 1.2em;
+        position: absolute;
+        top:566px;
+        left:52%;
+    }
+
+    #pinnom{
+        position: absolute;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2em;    
+        top: 650px;
+        left: 30%;
+
+    }
+    
 
     #logo{
         top:650px;

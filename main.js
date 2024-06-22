@@ -27,6 +27,10 @@ function estoyenIglesia(){
     logo.style.top="1080px";
 }
 
+function estoyenRest(){
+    logo.style.top="720px";
+}
+
 function cambiarVista(id){
     if(vistaActual){
         document.getElementById(vistaActual).classList.remove("visible");
@@ -50,6 +54,7 @@ menu.forEach(function(word,index){
             break;
         case "restaurante":
             id="LRest";
+            estoyenRest();
             break;
         case "regalo":
             id="LRegalo"
