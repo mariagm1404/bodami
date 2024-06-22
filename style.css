@@ -299,12 +299,13 @@ button:hover {
     top:800px;
 }
 
-#LIglesia >#par{
+#parkings >#par{
     position: absolute;
     display: flex;
-    width: 96%;
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
     justify-content: space-between;
-    padding-left: 10px;
 }
 #LIglesia > button{
     margin-left: 2em;
@@ -328,8 +329,7 @@ footer img{
     position:relative;
     width: 13%; 
     top:1000px;
-    left: 33%;
-    padding: 1em;
+    left: 43.5%;
     padding-bottom: 3em;
 }
 
@@ -531,8 +531,9 @@ footer img{
     }
    
 
-    footer img{
+    #logo{
         top:650px;
         width: 20%; 
+        left: 40%;
     }
 }

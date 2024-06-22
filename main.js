@@ -17,7 +17,6 @@ var logo =document.getElementById("logo");
 
 function estoyenAsistencia(){
     logo.style.top="80px";
-    logo.style.left="33%";
 }
 
 function estoyenInicio(){
@@ -25,9 +24,7 @@ function estoyenInicio(){
 }
 
 function estoyenIglesia(){
-    logo.style.top="1000px";
-    logo.style.left="33%";
-
+    logo.style.top="1080px";
 }
 
 function cambiarVista(id){
