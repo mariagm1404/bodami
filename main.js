@@ -31,7 +31,7 @@ function estoyenRest(){
     logo.style.top="720px";
 }
 function estoyenReg(){
-    logo.style.top="700px";
+    logo.style.top="640px";
 
 }
 

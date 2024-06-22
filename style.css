@@ -548,6 +548,7 @@ footer img{
 
     #parkings>p{
         font-size: 1.2em;
+        text-align: justify;
     }
 
     /*Restaurante*/
@@ -568,10 +569,21 @@ footer img{
         left: 30%;
 
     }
+
+    
     /*Regalo*/
     #LRegalo > h2{
         font-size: 1.2em;
-        padding-left: 12px;
+        margin-top: 0;
+        text-align: center;
+        top:580px;
+    }
+    #LRegalo > h2:nth-of-type(1){
+        position: absolute;
+        text-align: left;
+        top:559px;
+        left: 51%;
+        padding-left: 0;
     }
 
     #logo{
