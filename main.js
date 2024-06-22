@@ -30,6 +30,10 @@ function estoyenIglesia(){
 function estoyenRest(){
     logo.style.top="720px";
 }
+function estoyenReg(){
+    logo.style.top="700px";
+
+}
 
 function cambiarVista(id){
     if(vistaActual){
@@ -58,6 +62,7 @@ menu.forEach(function(word,index){
             break;
         case "regalo":
             id="LRegalo"
+            estoyenReg();
             break;
         default:
             id="inicio";  

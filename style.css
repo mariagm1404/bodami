@@ -483,6 +483,24 @@ footer img{
 
     /*Asistencia*/
 
+    #wapp{
+        display: flex;
+        justify-content: space-around;
+        width: 99%;
+        padding-left: 10%;
+    }
+    #wapp > h2, #numtel > h2{
+        font-size: 15px;
+        margin: 0;
+    }
+    #numtel {
+        font-size: 0.8em;
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+        padding-left: 9%;
+    }
+
      /*Iglesia*/
 
 
@@ -550,7 +568,11 @@ footer img{
         left: 30%;
 
     }
-    
+    /*Regalo*/
+    #LRegalo > h2{
+        font-size: 1.2em;
+        padding-left: 12px;
+    }
 
     #logo{
         top:650px;
