@@ -18,10 +18,11 @@ body{
 nav> p{
     cursor: pointer;
 }
-.aleo {
+.aleo-l {
+    font-size: 2em;
     font-family: "Aleo", serif;
     font-optical-sizing: auto;
-    font-weight: 200;
+    font-weight: 350;
     font-style: normal;
   }
 
@@ -392,6 +393,9 @@ footer img{
     }
     #contenedor > nav{   
         width: 90%;
+    }
+    #nav>p{
+        font-size: 13.5px;
     }
     #inicio #nombres{
         width: 50%;
