@@ -483,6 +483,9 @@ footer img{
 
     /*Asistencia*/
 
+     /*Iglesia*/
+
+
     #ceremonia > h2{
         font-size: 1.2em;
     }
@@ -490,13 +493,13 @@ footer img{
         position: absolute;
         background-color: #ffffff;
         top:542px;
-        left:50%;
+        left:52%;
         width: 150px;
     }
     #ceremonia > h2:nth-of-type(2){
         background-color: #ffffff;
         top:652px;
-        left:25%;
+        left:28%;
     }
     #ceremonia > a{
         background-color: #ffffff;
@@ -519,7 +522,6 @@ footer img{
         left:21%;
     }
 
-    /*Iglesia*/
     #LIglesia>#parkings{
         position: absolute;
         top:750px;
