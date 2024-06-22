@@ -296,11 +296,9 @@ button:hover {
 }
 #LIglesia >#parkings{
     position: absolute;
-    top:1000px;
+    top:800px;
 }
-#LIglesia >#parkings, h2{
-    padding-left: 10px;
-}
+
 #LIglesia >#par{
     position: absolute;
     display: flex;
@@ -491,7 +489,7 @@ footer img{
     #ceremonia > h2:nth-of-type(1){
         position: absolute;
         background-color: #ffffff;
-        top:545px;
+        top:542px;
         left:50%;
         width: 150px;
     }
@@ -520,6 +518,18 @@ footer img{
         top:702px;
         left:21%;
     }
+
+    /*Iglesia*/
+    #LIglesia>#parkings{
+        position: absolute;
+        top:750px;
+        padding: 20px;
+    }
+
+    #parkings>p{
+        font-size: 1.2em;
+    }
+   
 
     footer img{
         top:650px;

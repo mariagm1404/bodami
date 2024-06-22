@@ -25,7 +25,9 @@ function estoyenInicio(){
 }
 
 function estoyenIglesia(){
-    logo.style.top="1200px";
+    logo.style.top="1000px";
+    logo.style.left="33%";
+
 }
 
 function cambiarVista(id){
