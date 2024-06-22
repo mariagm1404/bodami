@@ -397,7 +397,7 @@ footer img{
     }
     #inicio #nombres{
         width: 50%;
-        left:3.5%;
+        left:3.8%;
         top:210px;
     }
     .linea-vertical {
@@ -458,6 +458,11 @@ footer img{
         width: 25%;
         left:11.5%;
     }
+    #vienes{
+        position: absolute;
+        top: 546px;
+        left: 50%;
+    }
 
     #persona> h1{
         font-size: 1em;
@@ -486,7 +491,7 @@ footer img{
     #ceremonia > h2:nth-of-type(1){
         position: absolute;
         background-color: #ffffff;
-        top:572px;
+        top:545px;
         left:50%;
         width: 150px;
     }
@@ -497,7 +502,7 @@ footer img{
     }
     #ceremonia > a{
         background-color: #ffffff;
-        top:690px;
+        top:700px;
         font-size: 1.2em;
         left:29%;
     }
@@ -508,11 +513,11 @@ footer img{
         z-index: 5;
     }
     #ceremonia > span:nth-of-type(1){
-        top:663px;
+        top:670px;
         left:21%;
     }
     #ceremonia > span:nth-of-type(2){
-        top:690px;
+        top:702px;
         left:21%;
     }
 
