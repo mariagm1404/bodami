@@ -13,26 +13,25 @@ function cambiarNav(idNav){
     });     
 }
 
-var logo =document.getElementById("logo");
+var logo =document.querySelector(".logo");
 
 function estoyenAsistencia(){
-    logo.style.top="80px";
+    logo.id="logoA";
 }
 
 function estoyenInicio(){
-    logo.style.top="650px";
+    logo.id="logoIn";
 }
 
 function estoyenIglesia(){
-    logo.style.top="1080px";
+    logo.id="logoIg";
 }
 
 function estoyenRest(){
-    logo.style.top="720px";
+    logo.id="logoR";
 }
 function estoyenReg(){
-    logo.style.top="640px";
-
+    logo.id="logoRg";
 }
 
 function cambiarVista(id){
