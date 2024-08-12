@@ -77,7 +77,7 @@ menu.forEach(function(word,index){
 //Cuenta atrás
 
 // Fecha final de la cuenta regresiva (puede ser en formato de fecha o milisegundos)
-const endDate = new Date("2024-10-10T12:00:00").getTime();
+const endDate = new Date("2024-10-19T12:00:00").getTime();
 
 // Actualizar la cuenta regresiva cada segundo
 const countdown = setInterval(function() {
